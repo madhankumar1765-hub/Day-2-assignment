@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <title>Document</title>
+        <style>
+            .show{
+                color: red;
+            }
+            .hide{
+                color: green;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <button id="show">show</button>
+        <label id="showlabel"></label>
+        <script>
+            var boolean;
+            const button = document.getElementById('show');
+            const label =  document.getElementById('showlabel');
+           button.addEventListener('click', function() {
+                boolean =!boolean;
+                label.textContent = `${boolean?"Label is visible":"Label is not visible"}`;
+                label.className = `${boolean?"show":"hide"}`;
+            });
+        </script>
+    </body>
+</html>
